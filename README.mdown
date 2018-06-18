@@ -37,8 +37,10 @@ As this requires access to the AWS API you will need this IAM policy as a minimu
         "Statement": [
             {
                 "Action": [
-                  "rds:DescribeDBInstances"
-                  "rds:DescribeDBEngineVersions"
+                  "guardduty:GetFindings",
+                  "guardduty:ListDetectors",
+                  "guardduty:ListFindings",
+                  "guardduty:GetDetector"
                 ],
                 "Resource": "*",
                 "Effect": "Allow"
