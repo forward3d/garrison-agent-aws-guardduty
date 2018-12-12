@@ -6,7 +6,7 @@ module Garrison
     end
 
     def self.all_regions
-      Aws.partition('aws').regions.map(&:name)
+      Aws::Partitions.partition('aws').service('GuardDuty').regions
     end
 
     def self.guardduty_enabled?(gd)
